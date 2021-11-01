@@ -2,11 +2,10 @@
   "name": "codingspace-proxy-server",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "dev": "./node_modules/.bin/netlify-lambda build src"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +15,9 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
-    "node-fetch": "^3.0.0"
+    "netlify-lambda": "^2.0.15",
+    "node-fetch": "^2.6.6",
+    "serverless-http": "^2.7.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"
