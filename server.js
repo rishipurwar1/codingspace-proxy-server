@@ -21,7 +21,6 @@ const fetchWithToken = (endpoint, method = "GET") => {
 };
 
 app.get("/:uid", async (req, res) => {
-  console.log(req.params.uid);
   try {
     const data = await fetchWithToken(`/${req.params.uid}`, "GET").then((r) =>
       r.json()
